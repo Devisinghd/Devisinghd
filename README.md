@@ -1,616 +1,641 @@
-<!--
-  Premium / Luxury 3D GitHub Profile README
-  - Dark luxury palette: obsidian, charcoal, gold accents, champagne glows
-  - Pure HTML + inline SVG + CSS (no JS)
-  - Replace `DEVISE_YOUR_USERNAME` and links where needed
--->
-
 <div class="luxury-root">
 
 <style>
-  /* ====== Palette & base ====== */
   :root{
-    --bg-obsidian: #0b0b0c;
+    --obsidian: #09090b;
     --charcoal: #111214;
-    --gold: #D4AF37;
-    --gold-2: #FFD86B;
-    --platinum: rgba(255,255,255,0.06);
+    --ink: #171a1d;
+    --gold: #d4af37;
+    --gold-2: #f9d77e;
+    --champagne: #f2e8cf;
+    --platinum: #edf2f7;
+    --muted: #a8b0b8;
     --glass: rgba(255,255,255,0.04);
-    --accent: #00d4ff;
-    --text: #E7E7E9;
-    --muted: #9AA0A6;
+    --line: rgba(212,175,55,0.18);
+    --shadow: rgba(0,0,0,0.6);
   }
 
   .luxury-root{
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    color: var(--text);
-    background: linear-gradient(180deg, rgba(10,10,10,0.85) 0%, rgba(3,3,3,0.95) 100%);
-    padding: 28px 18px;
-    border-radius: 14px;
+    max-width: 1100px;
+    margin: 26px auto;
+    padding: 28px 18px 20px;
+    border-radius: 18px;
+    background:
+      radial-gradient(circle at top, rgba(212,175,55,0.07), transparent 26%),
+      linear-gradient(180deg, rgba(17,18,20,0.96), rgba(8,8,10,0.98));
+    border: 1px solid rgba(255,255,255,0.04);
     box-shadow:
-      0 6px 30px rgba(0,0,0,0.7),
-      inset 0 1px 0 rgba(255,255,255,0.02);
-    max-width: 980px;
-    margin: 20px auto;
-    backdrop-filter: blur(6px);
-  }
-
-  a { color: var(--gold-2); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  /* ====== 3D Hero / Typographic Banner (SVG) ====== */
-  .hero {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    gap: 18px;
-    margin-bottom: 22px;
-  }
-
-  .hero-svg {
-    width: 100%;
-    max-width: 720px;
-    height: 96px;
-    display:block;
-  }
-
-  /* animated glint across text */
-  .glint {
-    position: relative;
-    overflow: visible;
-  }
-  .glint::after{
-    content: "";
-    position: absolute;
-    left: -40%;
-    top: -50%;
-    width: 40%;
-    height: 200%;
-    transform: skewX(-22deg);
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
-    animation: glintMove 6s linear infinite;
-    mix-blend-mode: screen;
-    pointer-events: none;
-  }
-  @keyframes glintMove{
-    0% { left: -40%; opacity: 0; }
-    30% { opacity: 1; }
-    55% { left: 120%; opacity: 1; }
-    100% { left: 120%; opacity: 0; }
-  }
-
-  /* Status card */
-  .status-wrapper {
-    display:flex;
-    align-items:center;
-    gap:12px;
-  }
-  .status-card{
-    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-    border-radius: 12px;
-    padding: 12px 16px;
-    min-width: 300px;
-    border: 1px solid rgba(212,175,55,0.12);
-    box-shadow:
-      0 8px 30px rgba(0,0,0,0.6),
-      0 0 18px rgba(212,175,55,0.04),
-      inset 0 1px 0 rgba(255,255,255,0.02);
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform .45s cubic-bezier(.2,.9,.2,1), box-shadow .45s;
-  }
-  .status-card:hover{
-    transform: translateY(-6px) rotateX(3deg);
-    box-shadow:
-      0 18px 48px rgba(0,0,0,0.7),
-      0 0 30px rgba(212,175,55,0.08);
-  }
-  .status-card::before{
-    content:"";
-    position:absolute;
-    inset: -2px;
-    border-radius:14px;
-    background: linear-gradient(90deg, rgba(212,175,55,0.06), rgba(255,255,255,0.02));
-    filter: blur(10px);
-    z-index:-1;
-    opacity:0.9;
-    transform: translateZ(-1px);
-    pointer-events:none;
-  }
-  .status-tagline{
-    font-weight:600;
-    color: var(--text);
-    letter-spacing:0.2px;
-  }
-  .status-mini {
-    display:flex;
-    gap:8px;
-    align-items:center;
-    color:var(--muted);
-    font-size:12px;
-  }
-
-  /* ====== Layout sections ====== */
-  .grid {
-    display:grid;
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-  @media(min-width:980px){
-    .grid { grid-template-columns: 1fr 420px; align-items:start; }
-  }
-
-  /* About card glass / brushed metal */
-  .card {
-    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-    border-radius: 12px;
-    padding: 18px;
-    border: 1px solid rgba(255,255,255,0.03);
-    box-shadow:
-      0 10px 30px rgba(0,0,0,0.6),
+      0 0 0 1px rgba(255,255,255,0.02),
+      0 16px 52px rgba(0,0,0,0.8),
       inset 0 1px 0 rgba(255,255,255,0.02);
     position: relative;
     overflow: hidden;
-  }
-  .card .title {
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin-bottom: 8px;
-  }
-  .card .title h3 {
-    margin:0;
-    font-size:18px;
-    letter-spacing:0.6px;
-  }
-  .about-body{
-    font-size:14px;
-    color:var(--muted);
-    line-height:1.55;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--platinum);
   }
 
-  /* micro decorative brushed-metal stripe */
-  .brushed {
-    height: 6px;
-    background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-    border-radius: 4px;
-    margin-bottom:12px;
-    box-shadow: 0 1px 0 rgba(255,255,255,0.02) inset;
+  .luxury-root::before{
+    content:"";
+    position:absolute;
+    inset:-35% auto auto -10%;
+    width:420px; height:420px;
+    background: radial-gradient(circle, rgba(212,175,55,0.18), transparent 62%);
+    filter: blur(30px);
+    pointer-events:none;
   }
 
-  /* Tech stack badges (grid + 3D hover) */
-  .stack {
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(96px,1fr));
-    gap:12px;
-    margin-top:6px;
-  }
-  .badge {
-    background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
-    border-radius: 10px;
-    padding: 10px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    border: 1px solid rgba(212,175,55,0.08);
-    transition: transform .36s cubic-bezier(.2,.9,.2,1), box-shadow .36s, filter .36s;
-    cursor: default;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-  }
-  .badge svg { width:40px; height:40px; flex-shrink:0; }
-  .badge .label { font-weight:600; font-size:13px; color:var(--text); }
-  .badge:hover{
-    transform: translateY(-8px) rotateX(6deg);
-    box-shadow: 0 26px 42px rgba(0,0,0,0.7), 0 0 30px rgba(212,175,55,0.06);
-    filter: saturate(1.08);
-  }
-  .badge .logo-wrap {
-    width:44px;height:44px;border-radius:8px;
-    display:grid;place-items:center;
-    background: linear-gradient(145deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-    border:1px solid rgba(255,255,255,0.02);
-    box-shadow: 0 4px 18px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.02);
-  }
-
-  /* Core pillars 3-column */
-  .pillars {
-    display:grid;
-    grid-template-columns: 1fr;
-    gap:12px;
-    margin-top:12px;
-  }
-  @media(min-width:720px){
-    .pillars { grid-template-columns: repeat(3,1fr); }
-  }
-  .pillar {
-    background: linear-gradient(180deg, rgba(255,255,255,0.012), rgba(255,255,255,0.008));
-    border-radius: 12px;
-    padding: 14px;
-    text-align:center;
-    border:1px solid rgba(212,175,55,0.06);
-    transition: transform .36s;
-  }
-  .pillar:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(0,0,0,0.6); }
-  .pillar h4 { margin:8px 0 6px 0; font-size:15px; color:var(--text); }
-  .pillar p { margin:0; color:var(--muted); font-size:13px; line-height:1.45; }
-
-  /* Stats panel - framed */
-  .stats-frame {
-    margin-top: 12px;
-    border-radius: 12px;
-    padding: 14px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
-    border: 1px solid rgba(212,175,55,0.06);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.65);
-    display:flex;
-    gap:12px;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
-  }
-  .stats-frame img {
-    border-radius:10px;
-    border: 1px solid rgba(255,255,255,0.02);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-    max-width:100%;
-  }
-
-  /* footer small */
-  .connect {
-    display:flex;
-    gap:12px;
-    align-items:center;
-    justify-content:center;
-    margin-top:16px;
-  }
-  .chip {
-    padding:8px 12px;
-    border-radius:999px;
-    background:linear-gradient(90deg, rgba(212,175,55,0.04), rgba(255,255,255,0.01));
-    border: 1px solid rgba(212,175,55,0.06);
-    font-size:13px;color:var(--muted);
-  }
-
-  /* subtle animated gradient background details */
   .luxury-root::after{
     content:"";
     position:absolute;
-    left:50%;
-    transform:translateX(-50%);
-    bottom:-80px;
-    width:760px;height:240px;
-    background: radial-gradient(closest-side, rgba(212,175,55,0.04), transparent 40%);
+    right:-10%; bottom:-20%;
+    width:420px; height:420px;
+    background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 60%);
     filter: blur(28px);
     pointer-events:none;
-    mix-blend-mode: screen;
+  }
+
+  a{
+    color: var(--gold-2);
+    text-decoration: none;
+  }
+
+  a:hover{
+    text-decoration: underline;
+  }
+
+  .hero{
+    display:grid;
+    grid-template-columns: 1fr auto;
+    gap: 18px;
+    align-items:center;
+    margin-bottom: 22px;
+  }
+
+  .hero-svg{
+    width:100%;
+    max-width: 780px;
+    height: 110px;
+    display:block;
+    filter: drop-shadow(0 0 18px rgba(212,175,55,0.18));
+  }
+
+  .glint{
+    position: relative;
+    overflow: visible;
+  }
+
+  .glint::after{
+    content:"";
+    position:absolute;
+    left:-30%;
+    top:-54%;
+    width:40%;
+    height:220%;
+    transform: skewX(-20deg);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+    animation: shimmer 7s ease-in-out infinite;
+    pointer-events:none;
+  }
+
+  @keyframes shimmer{
+    0% { left:-35%; opacity:0; }
+    20% { opacity:1; }
+    55% { left:120%; opacity:1; }
+    100% { left:120%; opacity:0; }
+  }
+
+  .status-card{
+    min-width: 330px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.024), rgba(255,255,255,0.01));
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 12px 14px;
+    box-shadow:
+      0 0 0 1px rgba(255,255,255,0.02),
+      0 18px 42px rgba(0,0,0,0.5),
+      inset 0 1px 0 rgba(255,255,255,0.05);
+    position: relative;
+    transition: transform .34s ease, box-shadow .34s ease;
+  }
+
+  .status-card:hover{
+    transform: translateY(-4px);
+    box-shadow:
+      0 0 0 1px rgba(255,255,255,0.02),
+      0 28px 58px rgba(0,0,0,0.72),
+      0 0 18px rgba(212,175,55,0.1);
+  }
+
+  .status-card::before{
+    content:"";
+    position:absolute;
+    inset:-8px;
+    border-radius:18px;
+    background: linear-gradient(90deg, rgba(212,175,55,0.08), transparent, rgba(255,255,255,0.05));
+    filter: blur(14px);
+    z-index:-1;
+  }
+
+  .status-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+  }
+
+  .status-left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex:1;
+  }
+
+  .crest{
+    width:42px; height:42px;
+    display:grid; place-items:center;
+    border-radius:12px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+    border:1px solid rgba(255,255,255,0.03);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+  }
+
+  .status-tag{
+    font-size:12px;
+    letter-spacing:0.12em;
+    color: var(--gold-2);
+    text-transform: uppercase;
+    margin-bottom:4px;
+    opacity:0.9;
+  }
+
+  .status-text{
+    font-size:13px;
+    color: var(--platinum);
+    font-weight: 600;
+    line-height:1.4;
+  }
+
+  .status-meta{
+    font-size:11px;
+    color: var(--muted);
+    margin-top:2px;
+  }
+
+  .live-pill{
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgba(212,175,55,0.12), rgba(255,255,255,0.02));
+    border:1px solid rgba(212,175,55,0.12);
+    color: var(--gold-2);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap:18px;
+    align-items:start;
+  }
+
+  .card{
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 16px;
+    padding: 18px 18px 16px;
+    box-shadow:
+      0 12px 30px rgba(0,0,0,0.42),
+      inset 0 1px 0 rgba(255,255,255,0.04);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before{
+    content:"";
+    position:absolute; inset:0;
+    background: linear-gradient(120deg, rgba(255,255,255,0.05), transparent 18%, transparent 82%, rgba(255,255,255,0.02));
+    pointer-events:none;
+  }
+
+  .title{
+    position: relative;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom: 10px;
+    z-index:1;
+  }
+
+  .title h3{
+    margin:0;
+    font-size: 17px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--platinum);
+  }
+
+  .rule{
+    height: 1px;
+    background: linear-gradient(90deg, rgba(212,175,55,0.30), rgba(255,255,255,0.04));
+    margin: 6px 0 12px;
+  }
+
+  .about-body{
+    font-size: 14px;
+    color: var(--muted);
+    line-height:1.72;
+    position: relative;
+    z-index:1;
+  }
+
+  .profile-points{
+    margin-top: 10px;
+    padding-left: 18px;
+    color: var(--muted);
+    line-height:1.8;
+  }
+
+  .profile-points li::marker{
+    color: var(--gold-2);
+  }
+
+  .stack{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px,1fr));
+    gap: 12px;
+    position: relative;
+    z-index:1;
+  }
+
+  .badge{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    min-height: 62px;
+    padding: 8px 10px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border: 1px solid rgba(212,175,55,0.08);
+    box-shadow:
+      0 10px 18px rgba(0,0,0,0.18),
+      inset 0 1px 0 rgba(255,255,255,0.04);
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  }
+
+  .badge:hover{
+    transform: translateY(-6px);
+    border-color: rgba(212,175,55,0.18);
+    box-shadow:
+      0 20px 28px rgba(0,0,0,0.3),
+      0 0 18px rgba(212,175,55,0.08);
+  }
+
+  .logo-box{
+    width: 46px; height: 46px;
+    display:grid; place-items:center;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+    border: 1px solid rgba(255,255,255,0.03);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+  }
+
+  .logo-box svg{
+    width: 38px; height: 38px;
+    display:block;
+  }
+
+  .badge-name{
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--platinum);
+    letter-spacing: 0.04em;
+  }
+
+  .pillars{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 12px;
+    margin-top: 14px;
+    position: relative;
+    z-index:1;
+  }
+
+  .pillar{
+    text-align:center;
+    padding: 16px 10px 12px;
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.022), rgba(255,255,255,0.01));
+    border: 1px solid rgba(212,175,55,0.08);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  }
+
+  .pillar:hover{
+    transform: translateY(-4px);
+    border-color: rgba(212,175,55,0.18);
+    box-shadow: 0 18px 32px rgba(0,0,0,0.3);
+  }
+
+  .pillar h4{
+    margin: 12px 0 6px;
+    font-size: 14px;
+    color: var(--platinum);
+  }
+
+  .pillar p{
+    margin:0;
+    font-size: 12px;
+    line-height:1.5;
+    color: var(--muted);
+  }
+
+  .stats-box{
+    display:flex;
+    flex-direction:column;
+    gap: 10px;
+    position: relative;
+    z-index:1;
+  }
+
+  .stats-box img{
+    width:100%;
+    border-radius: 12px;
+    border:1px solid rgba(255,255,255,0.04);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+  }
+
+  .connect{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin-top: 14px;
+    position: relative;
+    z-index:1;
+  }
+
+  .chip{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgba(212,175,55,0.08), rgba(255,255,255,0.02));
+    border: 1px solid rgba(212,175,55,0.12);
+    color: var(--platinum);
+    font-size:12px;
+    font-weight:600;
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+
+  .chip:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 0 16px rgba(212,175,55,0.1);
+  }
+
+  .footer-note{
+    margin-top: 18px;
+    text-align:center;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 980px){
+    .hero{
+      grid-template-columns: 1fr;
+    }
+    .status-card{
+      min-width: 0;
+      width: 100%;
+    }
+    .grid{
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 720px){
+    .pillars{
+      grid-template-columns: 1fr;
+    }
+    .status-row{
+      flex-direction: column;
+      align-items:flex-start;
+    }
   }
 </style>
 
-<!-- ====== HERO: 3D banner + status ====== -->
 <div class="hero">
-
-  <!-- Inline SVG 3D-style text -->
-  <div class="glint" aria-hidden="true">
-    <svg class="hero-svg" viewBox="0 0 1200 140" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="titleDesc">
-      <title id="titleDesc">Dev Dangi — Full Stack Developer — 3D Premium Banner</title>
+  <div class="glint">
+    <svg class="hero-svg" viewBox="0 0 1200 140" xmlns="http://www.w3.org/2000/svg" aria-label="Dev Dangi premium banner">
       <defs>
-        <linearGradient id="gradText" x1="0" x2="1">
-          <stop offset="0%" stop-color="#f6f0e6"/>
-          <stop offset="40%" stop-color="#e6d6b0"/>
-          <stop offset="100%" stop-color="#b08a2e"/>
+        <linearGradient id="goldHead" x1="0" x2="1">
+          <stop offset="0%" stop-color="#fff4d9"/>
+          <stop offset="28%" stop-color="#f8df9a"/>
+          <stop offset="58%" stop-color="#d4af37"/>
+          <stop offset="100%" stop-color="#8a6b1c"/>
         </linearGradient>
-
-        <!-- soft blur for glow -->
-        <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="8" result="blur"/>
+        <filter id="goldGlow">
+          <feGaussianBlur stdDeviation="5" result="blur"/>
           <feMerge>
             <feMergeNode in="blur"/>
             <feMergeNode in="SourceGraphic"/>
           </feMerge>
         </filter>
-
-        <!-- subtle beveled lighting -->
-        <linearGradient id="shine" x1="0" x2="0">
-          <stop offset="0%" stop-color="rgba(255,255,255,0.14)"/>
-          <stop offset="70%" stop-color="rgba(255,255,255,0.02)"/>
-        </linearGradient>
       </defs>
 
-      <!-- extruded shadow layers for 3D depth -->
-      <g font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="72" text-anchor="start">
-        <!-- Back shadow slices -->
-        <text x="40" y="90" fill="#050607" opacity="0.85" transform="translate(0,6)">
-          Dev Dangi
-        </text>
-        <text x="42" y="88" fill="#0c0c0d" opacity="0.8" transform="translate(0,3)">
-          Dev Dangi
-        </text>
+      <text x="42" y="90" fill="#050607" font-size="72" font-weight="700" font-family="Georgia, 'Times New Roman', serif" opacity="0.9" transform="translate(0,6)">Dev Dangi</text>
+      <text x="44" y="88" fill="#0a0b0c" font-size="72" font-weight="700" font-family="Georgia, 'Times New Roman', serif" opacity="0.75" transform="translate(0,3)">Dev Dangi</text>
+      <text x="44" y="86" fill="url(#goldHead)" font-size="72" font-weight="700" font-family="Georgia, 'Times New Roman', serif" filter="url(#goldGlow)">Dev Dangi</text>
 
-        <!-- Main gradient text -->
-        <text x="44" y="86" fill="url(#gradText)" style="filter:url(#softGlow);">
-          Dev Dangi
-        </text>
-
-        <!-- subtle highlight stroke -->
-        <text x="44" y="86" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.6">
-          Dev Dangi
-        </text>
-
-        <!-- subtitle -->
-        <text x="44" y="122" fill="#9ea6ad" font-size="20" font-weight="600">
-          Crafting Digital Luxury & High‑Performance Code
-        </text>
-      </g>
-
+      <text x="46" y="116" fill="#9ea7b4" font-size="18" font-weight="700" font-family="Segoe UI, sans-serif" letter-spacing="1.6">FULL STACK DEVELOPER • PYTHON • DJANGO • SCALABLE SYSTEMS</text>
     </svg>
   </div>
 
-  <!-- status card -->
-  <div class="status-wrapper" aria-hidden="false">
-    <div class="status-card" title="Crafting Digital Luxury & High‑Performance Code">
-      <div style="display:flex;flex-direction:column;gap:6px;">
-        <div style="display:flex;justify-content:space-between;align-items:center;">
-          <div style="display:flex;gap:10px;align-items:center;">
-            <div style="width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#1b1b1c,#0f0f10);display:grid;place-items:center;border:1px solid rgba(255,255,255,0.02)">
-              <!-- mini crest (SVG) -->
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <rect x="2" y="2" width="20" height="20" rx="4" fill="#0f0f10"/>
-                <path d="M6 15 L10 9 L14 14 L18 8" stroke="url(#gld)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                <defs>
-                  <linearGradient id="gld" x1="0" x2="1"><stop offset="0" stop-color="#FFD86B"/><stop offset="1" stop-color="#D4AF37"/></linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <div>
-              <div class="status-tagline">Crafting Digital Luxury & High‑Performance Code</div>
-              <div class="status-mini">Full-Stack • Django / FastAPI • Scalable Platforms</div>
-            </div>
-          </div>
-          <div style="display:flex;gap:8px;align-items:center;">
-            <span style="font-size:12px;color:var(--muted);">Current</span>
-            <span style="padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,#2a2a2b,#151515);border:1px solid rgba(212,175,55,0.08);color:var(--gold);font-weight:700;">Building NovaChat</span>
-          </div>
+  <div class="status-card">
+    <div class="status-row">
+      <div class="status-left">
+        <div class="crest">
+          <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="goldCrest" x1="0" x2="1">
+                <stop offset="0%" stop-color="#f9d77e"/>
+                <stop offset="100%" stop-color="#d4af37"/>
+              </linearGradient>
+            </defs>
+            <rect x="1" y="1" width="22" height="22" rx="6" fill="#0d0d10" stroke="rgba(255,255,255,0.05)"/>
+            <path d="M5 15 L9 9 L13 14 L19 7" stroke="url(#goldCrest)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div>
+          <div class="status-tag">Status</div>
+          <div class="status-text">Crafting Digital Luxury & High-Performance Code</div>
+          <div class="status-meta">Django • FastAPI • SaaS • Design-Led Products</div>
         </div>
       </div>
+
+      <div class="live-pill">Building NovaChat</div>
     </div>
   </div>
 </div>
 
-<!-- ====== MAIN GRID: Left (About/Stack/Pillars) / Right (Stats & Connect) ====== -->
 <div class="grid">
-
-  <!-- LEFT COLUMN -->
   <div>
-
-    <!-- About -->
-    <div class="card" aria-labelledby="aboutTitle">
+    <div class="card">
       <div class="title">
-        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <rect x="0.5" y="0.5" width="23" height="23" rx="5" fill="#0f0f10" stroke="rgba(212,175,55,0.08)"/>
-          <path d="M7 13 L11 8 L17 15" stroke="url(#g2)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          <defs><linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#FFD86B"/><stop offset="1" stop-color="#D4AF37"/></linearGradient></defs>
+        <svg width="26" height="26" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="5" fill="#111214" stroke="rgba(212,175,55,0.18)"/>
+          <path d="M7 13 L11 8 L17 16" stroke="url(#goldIconA)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="goldIconA" x1="0" x2="1"><stop offset="0%" stop-color="#f9d77e"/><stop offset="100%" stop-color="#d4af37"/></linearGradient>
+          </defs>
         </svg>
-        <h3 id="aboutTitle">About Me</h3>
+        <h3>About Me</h3>
       </div>
 
-      <div class="brushed" aria-hidden="true"></div>
+      <div class="rule"></div>
 
       <div class="about-body">
-        I'm Dev Dangi — a Full Stack developer who blends high-performance backend architecture with refined, pixel-perfect frontend experiences. I build mission-critical web platforms and APIs that scale reliably under real user load, while keeping UX delightful and accessible.
-        <ul style="margin-top:10px;color:var(--muted);">
-          <li>Primary: Python, Django, FastAPI</li>
-          <li>Frontend: React, TypeScript, Tailwind</li>
-          <li>Infra: PostgreSQL, Redis, Docker, GitHub Actions</li>
+        I’m Dev Dangi — a full stack developer focused on building polished digital products that feel premium, perform fast, and scale with confidence. I work across backend architecture, API systems, and product-driven frontend experiences.
+        <ul class="profile-points">
+          <li>Strong in Python, Django, FastAPI, and scalable backend design</li>
+          <li>Frontend engineering with React, TypeScript, and modern UI systems</li>
+          <li>Building SaaS products, internal tools, and product experiences with real-world impact</li>
         </ul>
       </div>
     </div>
 
-    <!-- Tech Stack -->
-    <div class="card" style="margin-top:12px;">
+    <div class="card" style="margin-top: 14px;">
       <div class="title">
-        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <rect x="1" y="1" width="22" height="22" rx="5" fill="#0f0f10" stroke="rgba(212,175,55,0.06)"/>
-          <path d="M6 12h12M6 7h12M6 17h12" stroke="rgba(255,255,255,0.06)" stroke-width="1.4" stroke-linecap="round"/>
+        <svg width="26" height="26" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="5" fill="#111214" stroke="rgba(212,175,55,0.18)"/>
+          <path d="M6 8h12M6 12h12M6 16h8" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
-        <h3 style="margin:0">Tech Stack</h3>
+        <h3>Tech Stack</h3>
       </div>
 
-      <div class="stack" aria-hidden="false">
-        <!-- Python -->
+      <div class="rule"></div>
+
+      <div class="stack">
         <div class="badge">
-          <div class="logo-wrap">
-            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Python">
-              <defs><linearGradient id="pyGrad" x1="0" x2="1"><stop offset="0" stop-color="#3776AB"/><stop offset="1" stop-color="#2E6CB2"/></linearGradient></defs>
-              <rect width="48" height="48" rx="8" fill="url(#pyGrad)"/>
-              <text x="24" y="32" font-size="18" font-weight="700" text-anchor="middle" fill="white" font-family="Inter,Arial">Py</text>
+          <div class="logo-box">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="pyGrad" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#3d8bd1"/>
+                  <stop offset="100%" stop-color="#2d6bab"/>
+                </linearGradient>
+              </defs>
+              <rect width="48" height="48" rx="10" fill="url(#pyGrad)"/>
+              <text x="24" y="30" font-size="18" font-weight="700" text-anchor="middle" fill="#fff" font-family="Segoe UI, sans-serif">Py</text>
             </svg>
           </div>
-          <div class="label">Python</div>
+          <div class="badge-name">Python</div>
         </div>
 
-        <!-- Django -->
         <div class="badge">
-          <div class="logo-wrap">
-            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Django">
-              <rect width="48" height="48" rx="8" fill="#092E20"/>
-              <text x="24" y="32" font-size="14" font-weight="700" text-anchor="middle" fill="#9EE9D3" font-family="Inter,Arial">Dj</text>
+          <div class="logo-box">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="10" fill="#0b2f25"/>
+              <text x="24" y="31" font-size="13" font-weight="700" text-anchor="middle" fill="#9ee9d3" font-family="Segoe UI, sans-serif">Dj</text>
             </svg>
           </div>
-          <div class="label">Django</div>
+          <div class="badge-name">Django</div>
         </div>
 
-        <!-- FastAPI -->
         <div class="badge">
-          <div class="logo-wrap">
-            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FastAPI">
-              <rect width="48" height="48" rx="8" fill="#009688"/>
-              <text x="24" y="32" font-size="12" font-weight="700" text-anchor="middle" fill="white" font-family="Inter,Arial">Fast</text>
+          <div class="logo-box">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="10" fill="#009688"/>
+              <text x="24" y="31" font-size="12" font-weight="700" text-anchor="middle" fill="#fff" font-family="Segoe UI, sans-serif">Fast</text>
             </svg>
           </div>
-          <div class="label">FastAPI</div>
+          <div class="badge-name">FastAPI</div>
         </div>
 
-        <!-- React -->
         <div class="badge">
-          <div class="logo-wrap">
-            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="React">
-              <rect width="48" height="48" rx="8" fill="#20232A"/>
-              <g transform="translate(6,6)" fill="none" stroke="#61DAFB" stroke-width="1.8">
-                <ellipse cx="18" cy="18" rx="10" ry="18" transform="rotate(0 18 18)"/>
-                <ellipse cx="18" cy="18" rx="10" ry="18" transform="rotate(60 18 18)"/>
-                <ellipse cx="18" cy="18" rx="10" ry="18" transform="rotate(120 18 18)"/>
+          <div class="logo-box">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="10" fill="#20232A"/>
+              <g fill="none" stroke="#61dafb" stroke-width="1.8">
+                <ellipse cx="24" cy="24" rx="11" ry="20" transform="rotate(0 24 24)"/>
+                <ellipse cx="24" cy="24" rx="11" ry="20" transform="rotate(60 24 24)"/>
+                <ellipse cx="24" cy="24" rx="11" ry="20" transform="rotate(120 24 24)"/>
               </g>
             </svg>
           </div>
-          <div class="label">React</div>
+          <div class="badge-name">React</div>
         </div>
 
-        <!-- TypeScript -->
         <div class="badge">
-          <div class="logo-wrap">
-            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TypeScript">
-              <rect width="48" height="48" rx="8" fill="#3178C6"/>
-              <text x="24" y="32" font-size="14" font-weight="700" text-anchor="middle" fill="white" font-family="Inter,Arial">TS</text>
+          <div class="logo-box">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="10" fill="#3178C6"/>
+              <text x="24" y="31" font-size="14" font-weight="700" text-anchor="middle" fill="#fff" font-family="Segoe UI, sans-serif">TS</text>
             </svg>
           </div>
-          <div class="label">TypeScript</div>
+          <div class="badge-name">TypeScript</div>
         </div>
 
-        <!-- Tailwind -->
         <div class="badge">
-          <div class="logo-wrap">
-            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tailwind">
-              <rect width="48" height="48" rx="8" fill="#06B6D4"/>
-              <path d="M8 30c8 0 8-10 20-10 4 0 8 4 12 4" stroke="#022D3A" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <div class="logo-box">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="10" fill="#06B6D4"/>
+              <path d="M6 30c8-10 14-11 20-4 7 8 12 8 16 3" stroke="#022d3a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
             </svg>
           </div>
-          <div class="label">Tailwind</div>
+          <div class="badge-name">Tailwind</div>
         </div>
 
-        <!-- PostgreSQL -->
         <div class="badge">
-          <div class="logo-wrap">
-            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PostgreSQL">
-              <rect width="48" height="48" rx="8" fill="#316192"/>
-              <text x="24" y="32" font-size="12" font-weight="700" text-anchor="middle" fill="#EAF5FF" font-family="Inter,Arial">PG</text>
+          <div class="logo-box">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="10" fill="#316192"/>
+              <text x="24" y="31" font-size="12" font-weight="700" text-anchor="middle" fill="#EAF5FF" font-family="Segoe UI, sans-serif">PG</text>
             </svg>
           </div>
-          <div class="label">Postgres</div>
+          <div class="badge-name">Postgres</div>
         </div>
 
-        <!-- Redis -->
         <div class="badge">
-          <div class="logo-wrap">
-            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Redis">
-              <rect width="48" height="48" rx="8" fill="#DC382D"/>
-              <circle cx="24" cy="24" r="8" fill="#FFF1F0" opacity="0.06"/>
-              <text x="24" y="32" font-size="12" font-weight="700" text-anchor="middle" fill="#fff" font-family="Inter,Arial">RD</text>
+          <div class="logo-box">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="10" fill="#DC382D"/>
+              <g fill="#fff" opacity="0.9">
+                <ellipse cx="24" cy="14" rx="12" ry="4"/>
+                <ellipse cx="24" cy="22" rx="10" ry="3"/>
+                <ellipse cx="24" cy="30" rx="8" ry="2.5"/>
+              </g>
             </svg>
           </div>
-          <div class="label">Redis</div>
+          <div class="badge-name">Redis</div>
         </div>
 
-        <!-- Docker -->
         <div class="badge">
-          <div class="logo-wrap">
-            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Docker">
-              <rect width="48" height="48" rx="8" fill="#2496ED"/>
-              <text x="24" y="32" font-size="12" font-weight="700" text-anchor="middle" fill="#fff" font-family="Inter,Arial">DK</text>
+          <div class="logo-box">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="10" fill="#2496ED"/>
+              <g fill="#fff" opacity="0.9">
+                <rect x="6" y="20" width="18" height="9" rx="2"/>
+                <rect x="18" y="15" width="16" height="9" rx="2"/>
+                <rect x="30" y="20" width="14" height="9" rx="2"/>
+              </g>
             </svg>
           </div>
-          <div class="label">Docker</div>
+          <div class="badge-name">Docker</div>
         </div>
 
-        <!-- GitHub Actions -->
         <div class="badge">
-          <div class="logo-wrap">
-            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub Actions">
-              <rect width="48" height="48" rx="8" fill="#0b0b0b"/>
-              <text x="24" y="32" font-size="10" font-weight="700" text-anchor="middle" fill="#2088FF" font-family="Inter,Arial">GHA</text>
-            </svg>
-          </div>
-          <div class="label">CI / CD</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Core Pillars -->
-    <div class="pillars" style="margin-top:12px;">
-      <div class="pillar">
-        <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true">
-          <rect x="1" y="1" width="22" height="22" rx="5" fill="#0f0f10" stroke="rgba(212,175,55,0.06)"/>
-          <path d="M6 12h12" stroke="#FFD86B" stroke-width="1.6" stroke-linecap="round"/>
-        </svg>
-        <h4>Architecture</h4>
-        <p>Clean, modular systems with business-driven domain models and secure API design.</p>
-      </div>
-
-      <div class="pillar">
-        <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true">
-          <rect x="1" y="1" width="22" height="22" rx="5" fill="#0f0f10" stroke="rgba(212,175,55,0.06)"/>
-          <path d="M6 12 L10 8 L14 12 L18 8" stroke="#FFD86B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <h4>Scalability</h4>
-        <p>Horizontal scaling patterns, caching strategies, and resilient background processing.</p>
-      </div>
-
-      <div class="pillar">
-        <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true">
-          <rect x="1" y="1" width="22" height="22" rx="5" fill="#0f0f10" stroke="rgba(212,175,55,0.06)"/>
-          <path d="M8 16c3-4 5-4 8 0" stroke="#FFD86B" stroke-width="1.6" stroke-linecap="round"/>
-        </svg>
-        <h4>Design</h4>
-        <p>Pixel-aware UI, accessibility-first components and delightful motion design.</p>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- RIGHT COLUMN -->
-  <aside>
-    <div class="card" aria-labelledby="statsTitle">
-      <div class="title">
-        <h3 id="statsTitle">GitHub Stats</h3>
-      </div>
-      <div class="brushed" aria-hidden="true"></div>
-
-      <!-- Styled frame for external readme images (replace username) -->
-      <div class="stats-frame">
-        <!-- Main stats (replace username in URL) -->
-        <img src="https://github-readme-stats.vercel.app/api?username=Devisinghd&show_icons=true&hide_border=true&bg_color=0b0b0b&title_color=FFD86B&icon_color=FFD86B&text_color=E7E7E9" alt="GitHub stats for Devisinghd" />
-
-        <!-- Top langs -->
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Devisinghd&layout=compact&hide_border=true&bg_color=0b0b0b&title_color=FFD86B&text_color=E7E7E9" alt="Top languages for Devisinghd" style="margin-top:10px;"/>
-
-        <!-- Trophy (optional) -->
-        <img src="https://github-profile-trophy.vercel.app/?username=Devisinghd&theme=gruvbox&no-frame=true&no-bg=true" alt="Trophies for Devisinghd" style="margin-top:10px;filter: hue-rotate(10deg) saturate(0.9)"/>
-      </div>
-
-      <div style="font-size:12px;color:var(--muted);margin-top:10px;text-align:center;">
-        Tip: customize the images' query params (title_color, bg_color, icon_color) to match theme.
-      </div>
-    </div>
-
-    <!-- Connect -->
-    <div style="margin-top:12px;" class="card">
-      <div class="title"><h3 style="margin:0">Connect</h3></div>
-      <div style="margin-top:10px;text-align:center;color:var(--muted);font-size:13px;">
-        <div style="display:flex;gap:8px;justify-content:center;margin-bottom:8px;">
-          <a href="https://github.com/Devisinghd" target="_blank" rel="noreferrer" class="chip">GitHub</a>
-          <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noreferrer" class="chip">LinkedIn</a>
-          <a href="https://x.com/your-handle" target="_blank" rel="noreferrer" class="chip">X</a>
-        </div>
-        <div style="color:var(--muted);font-size:13px;">Or email: <a href="mailto:devisinghdangi786@gmail.com" style="color:var(--gold-2)">devisinghdangi786@gmail.com</a></div>
-      </div>
-    </div>
-
-  </aside>
-
-</div>
-
-<!-- small footer note: usage & customizations -->
-<div style="margin-top:18px;text-align:center;color:var(--muted);font-size:13px;">
-  <div>Made with care • Dark luxury theme • 3D text & subtle motion — paste into <code>README.md</code> and replace links & username</div>
-</div>
-
-</div>
+          <div class="logo-box">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="10" fill="#0b0b0b"/>
+              <g fill="#2088FF">
+                <circle cx="16" cy="22" r="5"/>
+                <circle cx="32" cy="22" r="5"/>
+                <rect x="18" y="20" width="12" height="4" rx="2"/>
+              </g>
+
