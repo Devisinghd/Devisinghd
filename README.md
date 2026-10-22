@@ -1,45 +1,64 @@
-Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif) My name is Dev Dangi
-==================================================================================================================================
+<div align="center">
 
-FULL STACK DEVLOPER
--------------------
+# Hi, I'm Dev Dangi 👋
 
-I’m a passionate Python developer who loves building practical, user-focused web applications that solve real problems. I enjoy creating clean, efficient, and meaningful digital experiences using Django, FastAPI, and modern web tools. I’m driven by learning, experimenting, and turning ideas into projects that make an impact.
+### Full-stack developer · Python, Django & FastAPI
 
-* 🌍  I'm based in India
-* ✉️  You can contact me at [devisinghdangi786@gmail.com](mailto:devisinghdangi786@gmail.com)
-* 🚀  I'm currently working on [Novachat](http://https://github.com/Devisinghd/NovaChat-Social-App)
-* 🧠  I'm currently learning advanced Django patterns, API design and best practices and modern full-stack workflows
-* 👥  I'm looking to collaborate on Python, Django, and FastAPI projects web app MVPs and productivity tools
-* 💬  Ask me about I'm not saying I'm an alien, but have you ever seen me eat a CPU?
+I build practical, user-focused web applications and enjoy turning ideas into clean, useful digital experiences.
 
-<p align="left">
-<a href="https://www.python.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg" alt="Python" title="Python" width="36" height="36" /></a><a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/visualstudiocode-colored.svg" alt="VS Code" title="VS Code" width="36" height="36" /></a><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" alt="HTML5" title="HTML5" width="36" height="36" /></a><a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" alt="TailwindCSS" title="TailwindCSS" width="36" height="36" /></a><a href="https://fastapi.tiangolo.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/fastapi-colored.svg" alt="Fast API" title="Fast API" width="36" height="36" /></a><a href="https://www.postgresql.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/postgresql-colored.svg" alt="PostgreSQL" title="PostgreSQL" width="36" height="36" /></a><a href="https://render.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/render-colored.svg" alt="Render" title="Render" width="36" height="36" /></a><a href="https://flask.palletsprojects.com/en/3.0.x/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/flask-colored-dark.svg" alt="Flask" title="Flask" width="36" height="36" /></a><a href="https://ubuntu.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/ubuntu-colored.svg" alt="Ubuntu" title="Ubuntu" width="36" height="36" /></a><a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/django-colored-dark.svg" alt="Django" title="Django" width="36" height="36" /></a><a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/docker-colored.svg" alt="Docker" title="Docker" width="36" height="36" /></a>
+[![GitHub](https://img.shields.io/badge/GitHub-devisinghd-181717?style=for-the-badge&logo=github)](https://github.com/devisinghd)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/devisingh-dangi-505626323)
+[![Email](https://img.shields.io/badge/Email-Say%20hello-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:devisinghdangi786@gmail.com)
+
+</div>
+
+---
+
+## About me
+
+- 🌍 Based in India
+- 💻 Focused on Python, Django, FastAPI, and full-stack web development
+- 🚀 Currently working on [NovaChat](https://github.com/devisinghd/NovaChat-Social-App)
+- 🌱 Learning advanced Django patterns, API design, and modern full-stack workflows
+- 🤝 Open to collaborating on Python projects, web app MVPs, and productivity tools
+- ☕ Ask me about Python—or whether I’ve ever eaten a CPU (not yet)
+
+## Tech stack
+
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Code" />
+  <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu" />
+  <img src="https://img.shields.io/badge/Render-000000?style=for-the-badge&logo=render&logoColor=white" alt="Render" />
 </p>
 
-### Socials
+## Featured projects
 
-<p align="left"> <a href="https://www.github.com/devisinghd" target="_blank" rel="noreferrer"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github-dark.svg" /> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" alt="GitHub" title="GitHub" /> </picture> </a> <a href="https://www.linkedin.com/in/devisingh-dangi-505626323" target="_blank" rel="noreferrer"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin-dark.svg" /> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" alt="LinkedIn" title="LinkedIn" /> </picture> </a></p>
-<a href="https://www.github.com/devisinghd" target="_blank" rel="noreferrer"><img
-src="https://img.shields.io/github/followers/devisinghd?logo=github&style=for-the-badge&color=0891b2&labelColor=1c1917" /></a>
-### Badges
+<div align="center">
+  <a href="https://github.com/devisinghd/NovaChat-Social-App">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=devisinghd&repo=NovaChat-Social-App&theme=tokyonight&hide_border=true" alt="NovaChat Social App repository card" />
+  </a>
+  <a href="https://github.com/devisinghd/ShopFusion-Ecommerce-website">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=devisinghd&repo=ShopFusion-Ecommerce-website&theme=tokyonight&hide_border=true" alt="ShopFusion Ecommerce website repository card" />
+  </a>
+</div>
 
-<b>My GitHub Stats</b>
+## GitHub stats
 
-<a href="http://www.github.com/devisinghd"><img src="https://github-readme-stats.vercel.app/api?username=devisinghd&show_icons=true&hide=&count_private=true&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&show_icons=true" alt="devisinghd's GitHub stats" /></a>
+<div align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=devisinghd&show_icons=true&count_private=true&theme=tokyonight&hide_border=true" alt="Dev's GitHub statistics" />
+  <img height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=devisinghd&theme=tokyonight&hide_border=true" alt="Dev's GitHub contribution streak" />
+  <br />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=devisinghd&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&title=Top%20Languages" alt="Most used programming languages" />
+</div>
 
-<a href="http://www.github.com/devisinghd"><img src="https://github-readme-streak-stats.herokuapp.com/?user=devisinghd&stroke=ffffff&background=1c1917&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a>
+## Support
 
-<a href="https://github.com/devisinghd" align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=devisinghd&langs_count=10&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20%Languages" alt="Top Languages" /></a>
-
-<b>Top Repositories</b>
-
-<div width="100%" align="center"><a href="https://github.com/devisinghd/NovaChat-Social-App" align="left"><img align="left" width="45%" src="https://github-readme-stats.vercel.app/api/pin/?username=devisinghd&repo=NovaChat-Social-App&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en" /></a><a href="https://github.com/devisinghd/ShopFusion-Ecommerce-website" align="right"><img align="right" width="45%" src="https://github-readme-stats.vercel.app/api/pin/?username=devisinghd&repo=ShopFusion-Ecommerce-website&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en" /></a></div><br /><br /><br /><br /><br /><br /><br />
-
-### Support Me
-
-<ul style="list-style-type: none; margin: 0;">
-
-<li style="display: inline-block; margin-right: 0.25rem;"><a href="https://www.buymeacoffee.com/buymeacoffee.com/Devdangi"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="150"/></a></li>
-
-</ul>
+If you enjoy what I build, you can [buy me a coffee](https://www.buymeacoffee.com/Devdangi). ☕
